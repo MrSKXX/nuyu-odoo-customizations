@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  odoo:
+    image: odoo:16.0
+    container_name: nuyu_odoo
+    ports:
+      - "8069:8069"
+    volumes:
+      - ../modules:/mnt/extra-addons
+      - odoo-data:/var/lib/odoo
+    environment:
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=odoo
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    container_name: nuyu_db
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  odoo-data:
+  postgres-data:
