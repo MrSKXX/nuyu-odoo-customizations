@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_medical_consignment_user,medical.consignment.user,model_medical_consignment,stock.group_stock_user,1,1,1,0
+access_medical_consignment_manager,medical.consignment.manager,model_medical_consignment,stock.group_stock_manager,1,1,1,1
+access_medical_consignment_line_user,medical.consignment.line.user,model_medical_consignment_line,stock.group_stock_user,1,1,1,0
+access_medical_consignment_line_manager,medical.consignment.line.manager,model_medical_consignment_line,stock.group_stock_manager,1,1,1,1
+access_medical_room_transfer_user,medical.room.transfer.user,model_medical_room_transfer,stock.group_stock_user,1,1,1,0
+access_medical_room_transfer_manager,medical.room.transfer.manager,model_medical_room_transfer,stock.group_stock_manager,1,1,1,1
+access_medical_room_transfer_line_user,medical.room.transfer.line.user,model_medical_room_transfer_line,stock.group_stock_user,1,1,1,0
+access_medical_room_transfer_line_manager,medical.room.transfer.line.manager,model_medical_room_transfer_line,stock.group_stock_manager,1,1,1,1

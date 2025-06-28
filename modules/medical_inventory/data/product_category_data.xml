@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- Medical Products Category -->
+        <record id="product_category_medical" model="product.category">
+            <field name="name">Medical Products</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+        
+        <!-- Injectable Products -->
+        <record id="product_category_injectable" model="product.category">
+            <field name="name">Injectable Treatments</field>
+            <field name="parent_id" ref="product_category_medical"/>
+        </record>
+        
+        <!-- Medical Consumables -->
+        <record id="product_category_consumables" model="product.category">
+            <field name="name">Medical Consumables</field>
+            <field name="parent_id" ref="product_category_medical"/>
+        </record>
+        
+        <!-- Retail Products -->
+        <record id="product_category_retail" model="product.category">
+            <field name="name">Retail Products</field>
+            <field name="parent_id" ref="product_category_medical"/>
+        </record>
+        
+        <!-- Medical Devices -->
+        <record id="product_category_devices" model="product.category">
+            <field name="name">Medical Devices</field>
+            <field name="parent_id" ref="product_category_medical"/>
+        </record>
+        
+        <!-- Sample Products -->
+        
+        <!-- Botox Sample -->
+        <record id="product_botox_100u" model="product.template">
+            <field name="name">Botox 100 Units</field>
+            <field name="categ_id" ref="product_category_injectable"/>
+            <field name="medical_category">injectable</field>
+            <field name="type">product</field>
+            <field name="tracking">lot</field>
+            <field name="requires_expiry">True</field>
+            <field name="requires_batch">True</field>
+            <field name="requires_refrigeration">True</field>
+            <field name="refrigeration_temp_min">2.0</field>
+            <field name="refrigeration_temp_max">8.0</field>
+            <field name="default_shelf_life_days">730</field>
+            <field name="minimum_stock_days">30</field>
+            <field name="list_price">450.00</field>
+            <field name="standard_price">350.00</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+        </record>
+        
+        <!-- Hyaluronic Acid Filler -->
+        <record id="product_filler_1ml" model="product.template">
+            <field name="name">Hyaluronic Acid Filler 1ml</field>
+            <field name="categ_id" ref="product_category_injectable"/>
+            <field name="medical_category">injectable</field>
+            <field name="type">product</field>
+            <field name="tracking">lot</field>
+            <field name="requires_expiry">True</field>
+            <field name="requires_batch">True</field>
+            <field name="requires_refrigeration">True</field>
+            <field name="refrigeration_temp_min">2.0</field>
+            <field name="refrigeration_temp_max">8.0</field>
+            <field name="default_shelf_life_days">1095</field>
+            <field name="minimum_stock_days">30</field>
+            <field name="list_price">280.00</field>
+            <field name="standard_price">220.00</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+        </record>
+        
+        <!-- Medical Serum -->
+        <record id="product_vitamin_c_serum" model="product.template">
+            <field name="name">Vitamin C Serum 30ml</field>
+            <field name="categ_id" ref="product_category_retail"/>
+            <field name="medical_category">retail</field>
+            <field name="type">product</field>
+            <field name="tracking">lot</field>
+            <field name="requires_expiry">True</field>
+            <field name="requires_batch">True</field>
+            <field name="requires_refrigeration">False</field>
+            <field name="default_shelf_life_days">365</field>
+            <field name="minimum_stock_days">30</field>
+            <field name="list_price">85.00</field>
+            <field name="standard_price">45.00</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+        </record>
+        
+        <!-- Disposable Needles -->
+        <record id="product_needles_30g" model="product.template">
+            <field name="name">Disposable Needles 30G</field>
+            <field name="categ_id" ref="product_category_consumables"/>
+            <field name="medical_category">consumable</field>
+            <field name="type">product</field>
+            <field name="tracking">lot</field>
+            <field name="requires_expiry">True</field>
+            <field name="requires_batch">True</field>
+            <field name="requires_refrigeration">False</field>
+            <field name="default_shelf_life_days">1825</field>
+            <field name="minimum_stock_days">60</field>
+            <field name="list_price">2.50</field>
+            <field name="standard_price">1.20</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+        </record>
+        
+    </data>
+</odoo>
